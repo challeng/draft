@@ -17,3 +17,5 @@
 
 # Ignore dota hero images
 /assets/images/heroes/*.png
+
+.DS_Store
