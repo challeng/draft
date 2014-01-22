@@ -15,8 +15,17 @@ namespace :setup do
 
 			puts "#{hero} has been imported"
 		end	
+	end
 
-  end
+	desc "take hero and put them in to model"
+	task heroes_to_models: :environment do 
+		dota_heroes.each do |image_name|
+				hero = Hero.find_or_create_by_image_name image_name: image_name
+				hero.update_attributes name: hero.image_name
+
+				puts "#{hero.name} has been saved"
+		end
+	end
 end
 
 
