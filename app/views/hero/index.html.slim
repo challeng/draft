@@ -1,0 +1,7 @@
+h1 Hero#index
+
+- @heroes.each do |hero|
+	.name 
+		= hero.name
+	.images
+		= image_tag "/assets/images/heroes/#{hero.image_name}.png"
