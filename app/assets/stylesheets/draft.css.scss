@@ -1,3 +1,113 @@
 // Place all the styles related to the draft controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+ }
+
+.container {
+	width:100%;
+	margin:auto;
+}
+
+.draft_box, .picks_box {
+	width:50%;
+	float:left;
+}
+
+.draft_box {
+	padding:1em;
+}
+
+.draft_picks {
+	width:100%;
+	clear:both;
+	float:left;
+	padding:1em;
+}
+
+.draft_pick {
+	border:1px solid #e4e4e4;
+	background-color:#f0f0f0;
+	width:127px;
+	height:71px;
+	max-width:15%;
+	margin:.5em 1em;
+	float:left;
+
+	@media (max-width:800px) {
+
+	}
+
+	&:hover {
+
+	}
+}
+
+.picks_box h2 {
+	text-align:center;
+}
+
+:hover {background-color: transparent; }
+
+.name {
+	float:left;
+	margin:0px 2px;
+	width:127px;
+	position:relative;
+
+	.name_desc {
+		width:300px;
+		height:200px;
+		display:none;
+		position:absolute;
+		background-color:#e4e4e4;
+		color:#3e3e3e;
+		border-radius:3px;
+		border:4px solid #3e3e3e;
+		font-size:2em;
+		z-index:1;
+		
+		img {
+			position:absolute;
+			top:0;
+			left:0;
+		}
+
+		a {
+			display:block;
+			position:absolute;
+			top:20px;
+			right:5px;
+			z-index:9999;
+			font-size:2em;
+			color:#fff;
+			background-color:#000;
+		}
+	}
+	/*
+	&:hover {
+		.name_desc {
+			display:block;
+			top:0px;
+			left:0px;
+		}
+	}
+	*/
+
+	h2 {
+		font-size:.8em;
+		font-weight:100;
+		display:block;
+		position:absolute;
+		top:60px;
+		left:10px;
+	}
+}
+
+
+.clicked .name_desc {
+	z-index:9999;
+}
