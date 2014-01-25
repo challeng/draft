@@ -1,7 +1,35 @@
-h1 Hero#index
+.top_picks
 
-- @heroes.each do |hero|
-	.name 
-		= hero.name
-	.images
-		= image_tag "/assets/heroes/#{hero.image_name}.png"
+
+.container
+
+	.draft_box
+		.heroes
+			- @heroes.each do |hero|
+				.name id=hero.name
+					.name_desc
+						h2= hero.name
+						= image_tag "/assets/heroes/#{hero.image_name}.png"
+						a href="#" 
+					.images
+						= image_tag "/assets/heroes/#{hero.image_name}.png"
+
+	.picks_box
+
+		h2 Team 1
+		.draft_picks
+			.draft_pick
+			.draft_pick
+			.draft_pick
+			.draft_pick
+			.draft_pick
+
+		h2 Team 2
+		.draft_picks
+			.draft_pick
+			.draft_pick
+			.draft_pick
+			.draft_pick
+			.draft_pick
+
+
